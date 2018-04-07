@@ -1,0 +1,50 @@
+{
+  "id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "data": {
+      "id": "/properties/data",
+      "type": "object",
+      "properties": {
+        "image_url": {
+          "id": "/properties/data/properties/image_url",
+          "type": "string",
+          "title": "Image URL"
+        },
+        "name": {
+          "id": "/properties/data/properties/name",
+          "type": "string",
+          "title": "Name"
+        },
+        "designation": {
+          "id": "/properties/data/properties/designation",
+          "type": "string",
+          "title": "Designation"
+        },
+        "description": {
+          "id": "/properties/data/properties/description",
+          "type": "string",
+          "title": "Description"
+        },
+        "linkedin_url": {
+          "id": "/properties/data/properties/linkedin_url",
+          "type": "string",
+          "title": "LinkedIn URL "
+        },
+        "facebook_url": {
+          "id": "/properties/data/properties/facebook_url",
+          "type": "string",
+          "title": "Facebook URL"
+        },
+        "twitter_url": {
+          "id": "/properties/data/properties/twitter_url",
+          "type": "string",
+          "title": "Twitter URL"
+        }
+      },
+      "required": ["name"]
+    }
+  }
+}
