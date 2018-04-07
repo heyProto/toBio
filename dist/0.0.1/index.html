@@ -3,16 +3,15 @@
   <head>
     <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>toStory</title>
+    <title>toBio</title>
     <link rel="stylesheet" type="text/css" href="card.min.css">
   </head>
   <body style='margin: 0px'>
-    <div id="tolink-div"></div>
+    <div id="bio-div"></div>
     <script src="https://cdn.protograph.pykih.com/lib/protograph-core.min.js"></script>
     <script src="card.min.js"></script>
     <script type="text/javascript">
-    var x = new ProtoGraph.Card.toStory();
-    window.ref_link_sources_url = "https://cdn.protograph.pykih.com/Assets/ref_link_sources.json"
+    var x = new ProtoGraph.Card.toBio();
     function findGetParameter(parameterName) {
       var result = null,
         tmp = [],
@@ -40,10 +39,8 @@
               data_base_path = base_url + "/" + view_cast_id,
               params;
 
-            document.querySelector('#tolink-div').style.minHeight = (mode == "col16") ? "430px" : "250px"
-
             params = {
-              selector: document.querySelector('#tolink-div'),
+              selector: document.querySelector('#bio-div'),
               data_url: data_base_path + "/data.json",
               domain: domain_name,
               onClickCallback: function () {
@@ -95,9 +92,6 @@
 
     function renderWithMode(mode) {
       switch(mode){
-        case 'col16':
-          x.renderSixteenCol();
-          break;
         case 'col7':
           x.renderSevenCol();
           break;

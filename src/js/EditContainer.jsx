@@ -34,7 +34,7 @@ export default class EditBioCard extends React.Component {
       optionalConfigJSON: this.state.dataJSON.configs,
       optionalConfigSchemaJSON: this.state.optionalConfigSchemaJSON
     }
-    getDataObj["name"] = getDataObj.dataJSON.data.headline.substr(0,225); // Reduces the name to ensure the slug does not get too long
+    getDataObj["name"] = getDataObj.dataJSON.data.name.substr(0,225); // Reduces the name to ensure the slug does not get too long
     return getDataObj;
   }
 
@@ -47,11 +47,10 @@ export default class EditBioCard extends React.Component {
         axios.get(this.props.optionalConfigSchemaURL),
         axios.get(this.props.uiSchemaURL)
       ]).then(axios.spread((card, schema, opt_config, opt_config_schema, uiSchema) => {
-          let formData = card.data,
-            stateVar;
+          let stateVar;
           stateVar = {
             dataJSON: {
-              card_data: formData,
+              card_data: card.data,
               configs: opt_config.data
             },
             schemaJSON: schema.data,
@@ -95,7 +94,7 @@ export default class EditBioCard extends React.Component {
   renderSEO() {
     let data = this.state.dataJSON.card_data.data,
       seo_blockquote;
-    seo_blockquote = `<blockquote><a href=${data.url} rel="nofollow">${data.headline ? `<h2>${data.headline}</h2>` : ""}</a>${data.byline ? `<p>${data.byline}</p>` : ""}${data.publishedat ? `<p>${data.publishedat}</p>` : ""}${data.series ? `<p>${data.series}</p>` : ""}${data.genre ? `<p>${data.genre}</p>` : ""}${data.subgenre ? `<p>${data.subgenre}</p>` : ""}${data.summary ? `<p>${data.summary}</p>` : ""}</blockquote>`;
+    seo_blockquote = `<blockquote>${data.designation ? `<p>${data.designation}</p>` : ""}${data.description ? `<p>${data.description}</p>` : ""}<p>${data.name}</p></blockquote>`;
     return seo_blockquote;
   }
 
@@ -148,30 +147,7 @@ export default class EditBioCard extends React.Component {
     });
   }
 
-  // toggleMode(e) {
-  //   let element = e.target.closest('a'),
-  //     mode = element.getAttribute('data-mode');
-  //   this.setState((prevState, props) => {
-  //     return {
-  //       mode: "blank"
-  //     }
-  //   }, (() => {
-  //     this.setState((prevState, props) => {
-  //       let newMode;
-  //       if (mode !== prevState.mode) {
-  //         newMode = mode;
-  //       } else {
-  //         newMode = prevState.mode
-  //       }
-  //       return {
-  //         mode: newMode
-  //       }
-  //     })
-  //   }))
-  // }
-
   toggleMode(e) {
-    console.log("hey")
     let element = e.target.closest('a'),
       mode = element.getAttribute('data-mode');
     this.setState((prevState, props) => {
@@ -192,7 +168,6 @@ export default class EditBioCard extends React.Component {
     if (this.state.schemaJSON === undefined) {
       return(<div>Loading</div>)
     } else {
-      console.log(this.state.mode)
       return (
         <div className="proto-container">
           <div className="ui grid form-layout">
