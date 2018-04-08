@@ -21,6 +21,7 @@ ProtoGraph.Card.toBio.prototype.renderEdit = function (onPublishCallback) {
       uiSchemaURL={this.options.ui_schema_url}
       optionalConfigURL={this.options.configuration_url}
       optionalConfigSchemaURL={this.options.configuration_schema_url}
+      onPublishCallback={this.onPublishCallback}
       mode={this.mode}
       ref={(e) => {
         this.containerInstance = this.containerInstance || e;
