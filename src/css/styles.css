@@ -64,10 +64,12 @@
 .col-2 .bio-card .profile-image {display: none;}
 
 .bio-card .profile-info .designation{
-  font-size: 10px;
+  font-size: 8px;
   color: #999;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  line-height: initial;
+  word-break: break-all;
 }
 
 .bio-card .profile-info .name{
@@ -75,14 +77,15 @@
   white-space: nowrap;
   height: 22px;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
 
 .bio-card .profile-info .social-share-icons img{
   margin-right: 15px;
   opacity: 0.3;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 5px;
+  height: 11px;
 }
 
 .bio-card .profile-info .social-share-icons img:hover{
