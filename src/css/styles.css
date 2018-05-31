@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Cabin');
 .bio-card{
-  height: 60px;
+  height: 93px;
   width: 100%;
   color: #333;
   overflow: hidden;
@@ -52,10 +52,12 @@
   font-size: 12px;
   color: #333;
   line-height: 18px;
-  height: 60px;
+  height: auto;
+  min-height: 60px;
+  max-height: 93px;
   padding-top: 3px;
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .col-4 .bio-card .bio-text,.col-3 .bio-card .bio-text,.col-2 .bio-card .bio-text {display: none;}
@@ -72,9 +74,9 @@
 }
 
 .bio-card .profile-info .name{
-  line-height: 22px;
+  line-height: 18px;
   white-space: nowrap;
-  height: 22px;
+  height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
 }

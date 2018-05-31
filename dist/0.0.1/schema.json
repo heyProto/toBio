@@ -26,7 +26,8 @@
         "description": {
           "id": "/properties/data/properties/description",
           "type": "string",
-          "title": "Description"
+          "title": "Description",
+          "maxLength": 200
         },
         "linkedin_url": {
           "id": "/properties/data/properties/linkedin_url",
