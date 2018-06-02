@@ -52,7 +52,7 @@ export default class toBioCard extends React.Component {
       let name = this.state.dataJSON.card_data.data.name,
         full_designation = this.state.dataJSON.card_data.data.designation,
         image = this.state.dataJSON.card_data.data.image_url === '' ? 'default.png' : this.state.dataJSON.card_data.data.image_url,
-        description = this.state.dataJSON.card_data.data.description,
+        bio = this.state.dataJSON.card_data.data.bio,
         lin_img = this.state.dataJSON.card_data.data.linkedin_url,
         fb_img = this.state.dataJSON.card_data.data.facebook_url,
         tw_img = this.state.dataJSON.card_data.data.twitter_url,
@@ -77,7 +77,7 @@ export default class toBioCard extends React.Component {
                 {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/fb.png" height="12px"/></a> : ''}
               </div>
             </div>
-            {description && description !== '' ? <div className="bio-text">{description}</div> : ''}
+            {bio && bio !== '' ? <div className="bio-text">{bio}</div> : ''}
           </div>
         </div>
       )
@@ -93,7 +93,7 @@ export default class toBioCard extends React.Component {
       let name = this.state.dataJSON.card_data.data.name,
         full_designation = this.state.dataJSON.card_data.data.designation,
         image = this.state.dataJSON.card_data.data.image_url === '' ? 'default.png' : this.state.dataJSON.card_data.data.image_url,
-        description = this.state.dataJSON.card_data.data.description,
+        bio = this.state.dataJSON.card_data.data.bio,
         lin_img = this.state.dataJSON.card_data.data.linkedin_url,
         fb_img = this.state.dataJSON.card_data.data.facebook_url,
         tw_img = this.state.dataJSON.card_data.data.twitter_url,
@@ -118,7 +118,7 @@ export default class toBioCard extends React.Component {
                 {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/fb.png" height="12px"/></a> : ''}
               </div>
             </div>
-            {description !== '' ? <div className="bio-text">{description}</div> : ''}
+            {bio !== '' ? <div className="bio-text">{bio}</div> : ''}
           </div>
         </div>
       )
@@ -134,7 +134,7 @@ export default class toBioCard extends React.Component {
       let name = this.state.dataJSON.card_data.data.name,
         full_designation = this.state.dataJSON.card_data.data.designation,
         image = this.state.dataJSON.card_data.data.image_url === '' ? 'default.png' : this.state.dataJSON.card_data.data.image_url,
-        description = this.state.dataJSON.card_data.data.description,
+        bio = this.state.dataJSON.card_data.data.bio,
         lin_img = this.state.dataJSON.card_data.data.linkedin_url,
         fb_img = this.state.dataJSON.card_data.data.facebook_url,
         tw_img = this.state.dataJSON.card_data.data.twitter_url,
@@ -159,7 +159,7 @@ export default class toBioCard extends React.Component {
                 {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/fb.png" height="12px"/></a> : ''}
               </div>
             </div>
-            {description !== '' ? <div className="bio-text">{description}</div> : ''}
+            {bio !== '' ? <div className="bio-text">{bio}</div> : ''}
           </div>
         </div>
       )
@@ -176,7 +176,7 @@ export default class toBioCard extends React.Component {
       let name = this.state.dataJSON.card_data.data.name,
         full_designation = this.state.dataJSON.card_data.data.designation,
         image = this.state.dataJSON.card_data.data.image_url === '' ? 'default.png' : this.state.dataJSON.card_data.data.image_url,
-        description = this.state.dataJSON.card_data.data.description,
+        bio = this.state.dataJSON.card_data.data.bio,
         lin_img = this.state.dataJSON.card_data.data.linkedin_url,
         fb_img = this.state.dataJSON.card_data.data.facebook_url,
         tw_img = this.state.dataJSON.card_data.data.twitter_url,
@@ -201,7 +201,7 @@ export default class toBioCard extends React.Component {
                 {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/fb.png" height="12px"/></a> : ''}
               </div>
             </div>
-            {description !== '' ? <div className="bio-text">{description}</div> : ''}
+            {bio !== '' ? <div className="bio-text">{bio}</div> : ''}
           </div>
         </div>
       )

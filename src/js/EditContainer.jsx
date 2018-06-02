@@ -94,7 +94,7 @@ export default class EditBioCard extends React.Component {
   renderSEO() {
     let data = this.state.dataJSON.card_data.data,
       seo_blockquote;
-    seo_blockquote = `<blockquote>${data.designation ? `<p>${data.designation}</p>` : ""}${data.description ? `<p>${data.description}</p>` : ""}<p>${data.name}</p></blockquote>`;
+    seo_blockquote = `<blockquote>${data.designation ? `<p>${data.designation}</p>` : ""}${data.bio ? `<p>${data.bio}</p>` : ""}<p>${data.name}</p></blockquote>`;
     return seo_blockquote;
   }
 
