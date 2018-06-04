@@ -27,7 +27,7 @@
           "id": "/properties/data/properties/description",
           "type": "string",
           "title": "Bio",
-          "maxLength": 200
+          "maxLength": 1000
         },
         "linkedin_url": {
           "id": "/properties/data/properties/linkedin_url",

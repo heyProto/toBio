@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Cabin');
 .bio-card{
-  height: 93px;
+  height: 399px;
   width: 100%;
   color: #333;
   overflow: hidden;
@@ -54,7 +54,7 @@
   line-height: 18px;
   height: auto;
   min-height: 60px;
-  max-height: 93px;
+  max-height: 399px;
   padding-top: 3px;
   box-sizing: border-box;
   /* overflow: hidden; */
