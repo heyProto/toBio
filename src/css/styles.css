@@ -1,129 +1,145 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Cabin');
-.bio-card{
-  height: 399px;
-  width: 100%;
-  color: #333;
-  overflow: hidden;
-  box-sizing: border-box;
-  /*padding: 5px;*/
-  font-family: "cabin";
-  cursor: pointer;
-  padding-left: 0px;
+.bio-card {
+    height: auto;
+    min-height: 60px;
+    max-height: 399px;
+    width: 100%;
+    color: #333;
+    overflow: hidden;
+    box-sizing: border-box;
+    /*padding: 5px;*/
+    font-family: "cabin";
+    cursor: pointer;
+    padding-left: 0px;
 }
 
-.bio-card .profile-image{
-  height: 60px;
-  width: 50px;
-  background: green;
-  border-radius: 4px;
-  display: inline-block;
-  float: left;
-  margin-right: 7px;
-  font-size: 14px;
-  overflow: hidden;
+.bio-card .profile-image {
+    height: 60px;
+    width: 50px;
+    background: green;
+    border-radius: 4px;
+    display: inline-block;
+    float: left;
+    margin-right: 7px;
+    font-size: 14px;
+    overflow: hidden;
 }
 
-.bio-card .profile-info{
-  display: inline-block;
-  margin-left: 5px;
+.bio-card .profile-info {
+    display: inline-block;
+    margin-left: 5px;
 }
 
-.col-7 .bio-card .profile-info{
-  width: 190px;
+.col-7 .bio-card .profile-info {
+    width: 190px;
 }
 
-.col-3 .bio-card .profile-info{
-  width: 150px;
+.col-3 .bio-card .profile-info {
+    width: 150px;
 }
 
-.col-4 .bio-card .profile-info{
-  width: 230px;
+.col-4 .bio-card .profile-info {
+    width: 230px;
 }
 
-.col-2 .bio-card .profile-info{
-  width: 120px;
+.col-2 .bio-card .profile-info {
+    width: 120px;
 }
 
-.col-7 .bio-card .bio-text{
-  width: 280px;
-  border-left: 1px solid #efefef;
-  padding-left: 10px;
-  float: right;
-  font-size: 12px;
-  color: #333;
-  line-height: 18px;
-  height: auto;
-  min-height: 60px;
-  max-height: 399px;
-  padding-top: 3px;
-  box-sizing: border-box;
-  /* overflow: hidden; */
+.col-7 .bio-card .bio-text {
+    width: 280px;
+    border-left: 1px solid #efefef;
+    padding-left: 10px;
+    float: right;
+    font-size: 12px;
+    color: #333;
+    line-height: 18px;
+    height: auto;
+    min-height: 60px;
+    max-height: 399px;
+    padding-top: 3px;
+    box-sizing: border-box;
+    /* overflow: hidden; */
 }
 
-.col-4 .bio-card .bio-text,.col-3 .bio-card .bio-text,.col-2 .bio-card .bio-text {display: none;}
-
-.col-2 .bio-card .profile-image {display: none;}
-
-.bio-card .profile-info .designation{
-  font-size: 8px;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  line-height: initial;
-  word-break: break-all;
+.col-4 .bio-card .bio-text,
+.col-3 .bio-card .bio-text,
+.col-2 .bio-card .bio-text {
+    display: none;
 }
 
-.bio-card .profile-info .name{
-  line-height: 18px;
-  white-space: nowrap;
-  height: 20px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.col-2 .bio-card .profile-image {
+    display: none;
 }
 
-.bio-card .profile-info .social-share-icons img{
-  margin-right: 15px;
-  opacity: 0.3;
-  cursor: pointer;
-  margin-top: 5px;
-  height: 11px;
+.bio-card .profile-info .designation {
+    font-size: 8px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: initial;
+    word-break: break-all;
 }
 
-.bio-card .profile-info .social-share-icons img:hover{
-  opacity: 1;
+.bio-card .profile-info .name {
+    line-height: 18px;
+    white-space: nowrap;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
+.bio-card .profile-info .social-share-icons img {
+    margin-right: 15px;
+    opacity: 0.3;
+    cursor: pointer;
+    margin-top: 5px;
+    height: 11px;
+}
+
+.bio-card .profile-info .social-share-icons img:hover {
+    opacity: 1;
+}
 
 body {
-  margin: 0px !important; }
+    margin: 0px !important;
+}
 
 .col-2 {
-  width: 140px; }
+    width: 140px;
+}
 
 .col-3 {
-  width: 220px; }
+    width: 220px;
+}
 
 .col-4 {
-  width: 300px; }
+    width: 300px;
+}
 
 .col-7 {
-  width: 540px; }
+    width: 540px;
+}
+
 @media only screen and (max-width: 500px) {
-  .col-7 {
-    width: 100%; }
+    .col-7 {
+        width: 100%;
+    }
+    .col-4 {
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .col-3 {
+        width: 300px;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .col-2 {
+        width: 300px;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
 
-  .col-4 {
-    margin-left: 50%;
-    transform: translate(-50%, 0); }
-
-  .col-3 {
-    width: 300px;
-    margin-left: 50%;
-    transform: translate(-50%, 0); }
-
-  .col-2 {
-    width: 300px;
-    margin-left: 50%;
-    transform: translate(-50%, 0); } }
 
 /*# sourceMappingURL=grid.css.map */
