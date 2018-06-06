@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
+import { render } from 'react-dom';
+import {all as axiosAll, get as axiosGet, spread as axiosSpread} from 'axios';
 
 export default class toBioCard extends React.Component {
   constructor(props) {
@@ -11,7 +11,6 @@ export default class toBioCard extends React.Component {
         card_data: {},
         configs: {}
       },
-      optionalConfigJSON: {},
     };
 
     if (this.props.dataJSON) {
@@ -19,24 +18,27 @@ export default class toBioCard extends React.Component {
       stateVar.dataJSON = this.props.dataJSON;
     }
 
-    if (this.props.optionalConfigJSON) {
-      stateVar.optionalConfigJSON = this.props.optionalConfigJSON;
-    }
+    
     this.state = stateVar;
   }
 
   componentDidMount() {
     if (this.state.fetchingData){
-      axios.all([axios.get(this.props.dataURL)])
-        .then(axios.spread((card) => {
+
+      axiosAll([axiosGet(this.props.dataURL), axiosGet(this.props.siteConfigURL)])
+        .then(axiosSpread((card, site_configs) => {
+          
           this.setState({
             fetchingData: false,
             dataJSON: {
               card_data: card.data
-            }
+            },
+            siteConfigs:site_configs.data
           });
         }));
+  
     }
+    
   }
 
   exportData() {

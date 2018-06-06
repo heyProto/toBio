@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import axios from 'axios';
+import {all as axiosAll, get as axiosGet, spread as axiosSpread} from 'axios';
 import BioCard from './Container.jsx';
 import JSONSchemaForm from '../../lib/js/react-jsonschema-form';
 
@@ -17,9 +17,7 @@ export default class EditBioCard extends React.Component {
       loading: true,
       publishing: false,
       uiSchemaJSON: {},
-      schemaJSON: undefined,
-      optionalConfigJSON: {},
-      optionalConfigSchemaJSON: undefined
+      schemaJSON: undefined
     }
     this.toggleMode = this.toggleMode.bind(this);
   }
@@ -30,9 +28,7 @@ export default class EditBioCard extends React.Component {
       step: this.state.step,
       dataJSON: data.card_data,
       schemaJSON: this.state.schemaJSON,
-      uiSchemaJSON: this.state.uiSchemaJSON,
-      optionalConfigJSON: this.state.dataJSON.configs,
-      optionalConfigSchemaJSON: this.state.optionalConfigSchemaJSON
+      uiSchemaJSON: this.state.uiSchemaJSON
     }
     getDataObj["name"] = getDataObj.dataJSON.data.name.substr(0,225); // Reduces the name to ensure the slug does not get too long
     return getDataObj;
@@ -40,26 +36,24 @@ export default class EditBioCard extends React.Component {
 
   componentDidMount() {
     if (typeof this.props.dataURL === "string"){
-      axios.all([
-        axios.get(this.props.dataURL),
-        axios.get(this.props.schemaURL),
-        axios.get(this.props.optionalConfigURL),
-        axios.get(this.props.optionalConfigSchemaURL),
-        axios.get(this.props.uiSchemaURL)
-      ]).then(axios.spread((card, schema, opt_config, opt_config_schema, uiSchema) => {
+      axiosAll([
+        axiosGet(this.props.dataURL),
+        axiosGet(this.props.schemaURL),
+        axiosGet(this.props.uiSchemaURL),
+        axiosGet(this.props.siteConfigURL)
+      ]).then(axiosSpread((card, schema, uiSchema, site_configs) => {
           let stateVar;
           stateVar = {
             dataJSON: {
               card_data: card.data,
-              configs: opt_config.data
             },
             schemaJSON: schema.data,
             uiSchemaJSON: uiSchema.data,
-            optionalConfigJSON: opt_config.data,
-            optionalConfigSchemaJSON: opt_config_schema.data
+            siteConfigs:site_configs.data
           }
           this.setState(stateVar);
         }))
+      console.log(this.state)  
     }
   }
 
@@ -104,9 +98,7 @@ export default class EditBioCard extends React.Component {
       case 1:
         return this.state.schemaJSON;
         break;
-      case 2:
-        return this.state.optionalConfigSchemaJSON;
-        break;
+      
     }
   }
 
@@ -115,9 +107,7 @@ export default class EditBioCard extends React.Component {
       case 1:
         return this.state.dataJSON.card_data;
         break;
-      case 2:
-        return this.state.dataJSON.configs;
-        break;
+      
     }
   }
 
@@ -223,7 +213,6 @@ export default class EditBioCard extends React.Component {
                   <BioCard
                     mode={this.state.mode}
                     dataJSON={this.state.dataJSON}
-                    optionalConfigJSON={this.state.optionalConfigJSON}
                   />                 
               </div>
             </div>
