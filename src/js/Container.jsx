@@ -72,9 +72,9 @@ export default class toBioCard extends React.Component {
               <div className="name">{name}</div>
               <div className="designation" title={show_tooltip ? full_designation : undefined }>{designation}</div>
               <div className="social-share-icons">
-                {(lin_img && lin_img !== '') ? <a href={lin_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/lin.png" height="12px"/></a> : ''}
-                {(tw_img && tw_img !== '') ? <a href={tw_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/tw.png" height="12px"/></a> : ''}
-                {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/fb.png" height="12px"/></a> : ''}
+                {(lin_img && lin_img !== '') ? <a href={lin_img} target="_blank"><img src="https://utils.pro.to/Assets/lin.png" height="12px"/></a> : ''}
+                {(tw_img && tw_img !== '') ? <a href={tw_img} target="_blank"><img src="https://utils.pro.to/Assets/tw.png" height="12px"/></a> : ''}
+                {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://utils.pro.to/Assets/fb.png" height="12px"/></a> : ''}
               </div>
             </div>
             {bio && bio !== '' ? <div className="bio-text">{bio}</div> : ''}
@@ -113,9 +113,9 @@ export default class toBioCard extends React.Component {
               <div className="name">{name}</div>
               <div className="designation" title={show_tooltip ? full_designation : undefined }>{designation}</div>
               <div className="social-share-icons">
-               {(lin_img && lin_img !== '') ? <a href={lin_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/lin.png" height="12px"/></a> : ''}
-                {(tw_img && tw_img !== '') ? <a href={tw_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/tw.png" height="12px"/></a> : ''}
-                {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/fb.png" height="12px"/></a> : ''}
+               {(lin_img && lin_img !== '') ? <a href={lin_img} target="_blank"><img src="https://utils.pro.to/Assets/lin.png" height="12px"/></a> : ''}
+                {(tw_img && tw_img !== '') ? <a href={tw_img} target="_blank"><img src="https://utils.pro.to/Assets/tw.png" height="12px"/></a> : ''}
+                {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://utils.pro.to/Assets/fb.png" height="12px"/></a> : ''}
               </div>
             </div>
             {bio !== '' ? <div className="bio-text">{bio}</div> : ''}
@@ -154,9 +154,9 @@ export default class toBioCard extends React.Component {
               <div className="name">{name}</div>
               <div className="designation" title={show_tooltip ? full_designation : undefined }>{designation}</div>
               <div className="social-share-icons">
-                {(lin_img && lin_img !== '') ? <a href={lin_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/lin.png" height="12px"/></a> : ''}
-                {(tw_img && tw_img !== '') ? <a href={tw_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/tw.png" height="12px"/></a> : ''}
-                {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/fb.png" height="12px"/></a> : ''}
+                {(lin_img && lin_img !== '') ? <a href={lin_img} target="_blank"><img src="https://utils.pro.to/Assets/lin.png" height="12px"/></a> : ''}
+                {(tw_img && tw_img !== '') ? <a href={tw_img} target="_blank"><img src="https://utils.pro.to/Assets/tw.png" height="12px"/></a> : ''}
+                {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://utils.pro.to/Assets/fb.png" height="12px"/></a> : ''}
               </div>
             </div>
             {bio !== '' ? <div className="bio-text">{bio}</div> : ''}
@@ -196,9 +196,9 @@ export default class toBioCard extends React.Component {
               <div className="name">{name}</div>
               <div className="designation" title={show_tooltip ? full_designation : undefined }>{designation}</div>
               <div className="social-share-icons">
-                {(lin_img && lin_img !== '') ? <a href={lin_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/lin.png" height="12px"/></a> : ''}
-                {(tw_img && tw_img !== '') ? <a href={tw_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/tw.png" height="12px"/></a> : ''}
-                {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://cdn.protograph.pykih.com/Assets/fb.png" height="12px"/></a> : ''}
+                {(lin_img && lin_img !== '') ? <a href={lin_img} target="_blank"><img src="https://utils.pro.to/Assets/lin.png" height="12px"/></a> : ''}
+                {(tw_img && tw_img !== '') ? <a href={tw_img} target="_blank"><img src="https://utils.pro.to/Assets/tw.png" height="12px"/></a> : ''}
+                {(fb_img && fb_img !== '') ? <a href={fb_img} target="_blank"><img src="https://utils.pro.to/Assets/fb.png" height="12px"/></a> : ''}
               </div>
             </div>
             {bio !== '' ? <div className="bio-text">{bio}</div> : ''}
